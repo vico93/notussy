@@ -1,62 +1,61 @@
 # Project Kickoff Kit
 
-A portable Agent Skills workflow for turning an early project idea into an approved plan and a clear handoff. It supports OpenCode and Pi with one shared skill. The kit conducts discovery, planning, approval, and handoff only; it does not implement the project.
+A portable Agent Skills workflow for project discovery, planning, approval, and implementation handoff. It supports OpenCode and Pi through the standard `SKILL.md` format. The kit stops at handoff; it does not implement the project.
 
 ## Install for one project
 
-Copy the `project-kickoff` skill folder from this repository into the target project's supported skills directory. Keep the folder name and `SKILL.md` together. No global installation is needed.
+Copy the `skills/project-kickoff/` directory from this repository into the target project's skill directory. The skill includes its templates and interview guide, so no other repository files are needed.
 
 ### OpenCode
 
-From the target project root, copy:
+Copy to `.opencode/skills/project-kickoff/` in the target project. OpenCode discovers the skill and makes it available to the agent when relevant. To request it directly, mention `@project-kickoff` in your prompt; the model loads its instructions through OpenCode's skill tool. Skills are not automatically registered as custom slash commands.
 
-```text
-notussy/skills/project-kickoff/
-    -> <target-project>/.opencode/skills/project-kickoff/
-```
-
-The resulting file should be `.opencode/skills/project-kickoff/SKILL.md`. OpenCode discovers project skills there. In a session, invoke it as `/project-kickoff` or ask the agent to use the `project-kickoff` skill.
-
-Alternatively, OpenCode also discovers `.agents/skills/`; use `.agents/skills/project-kickoff/` if you want the same project skill location to work across compatible harnesses.
+You can also install it under `.agents/skills/project-kickoff/`, which OpenCode supports and which is also Pi's standard project-level Agent Skills location.
 
 ### Pi.dev
 
-Copy the same folder to:
-
-```text
-notussy/skills/project-kickoff/
-    -> <target-project>/.agents/skills/project-kickoff/
-```
-
-Pi discovers project skills under `.agents/skills/`. Start Pi from the project (or a subdirectory) and invoke `/skill:project-kickoff`, or ask Pi to use that skill.
+Copy to `.agents/skills/project-kickoff/` in the target project. Start Pi from the project or a subdirectory. Pi discovers it and exposes `/skill:project-kickoff` for explicit invocation; it may also load the skill when relevant.
 
 ### Copy commands
 
-Run from the target project's root, adjusting the source path to your clone:
+Run from the target project's root and adjust the source path to your clone. Create the destination parent directory first if needed.
+
+PowerShell:
 
 ```powershell
-# OpenCode
+New-Item -ItemType Directory -Force ".opencode\skills" | Out-Null
 Copy-Item -Recurse "D:\path\to\notussy\skills\project-kickoff" ".opencode\skills\project-kickoff"
 
-# Pi.dev (portable Agent Skills location)
+# For Pi.dev or a shared project skill location:
+New-Item -ItemType Directory -Force ".agents\skills" | Out-Null
 Copy-Item -Recurse "D:\path\to\notussy\skills\project-kickoff" ".agents\skills\project-kickoff"
 ```
 
-Create the destination parent directory first if it does not exist. Alternatively, copy the folder in your file manager. Keep the skill in version control if the whole team should use it.
+Bash:
 
-## Use the kit
+```bash
+mkdir -p .opencode/skills
+cp -R /path/to/notussy/skills/project-kickoff .opencode/skills/
 
-The skill interviews you, drafts `devplan.md`, presents it for explicit approval, then prepares `handoff.md`. It writes those two documents into the target directory you choose only after approval. Validation is optional. Templates are in `templates/` for reference or customization.
+# For Pi.dev or a shared project skill location:
+mkdir -p .agents/skills
+cp -R /path/to/notussy/skills/project-kickoff .agents/skills/
+```
 
-For OpenCode, `adapters/opencode/command/project-kickoff.md` is an optional command entry point; the shared skill is sufficient for installation and use. Pi uses the standard skill command directly.
+Keep the copied skill in version control if the whole team should use it. To update it, copy the newer `project-kickoff` directory over the project copy after reviewing any local changes.
 
-The workflow stops at handoff. It does not implement the project. Review the skill and templates before using them; the instructions may create files after you approve the plan.
+## What it does
+
+The skill interviews you, confirms its understanding, drafts a development plan in chat, and performs a self-review. It asks for explicit approval before writing `devplan.md` and `handoff.md` to the confirmed target directory. If either file already exists, it asks before replacing anything. It writes documents in the user's language. Verification guidance is planned but not executed during kickoff.
+
+The included interview guide is loaded only when useful. Templates are stored inside the skill at `skills/project-kickoff/templates/` and are available after copying the skill folder. Review the skill before use; after approval, it can create the two kickoff documents in your selected project location.
 
 ## Contents
 
 - `skills/project-kickoff/SKILL.md`: shared workflow and boundaries
-- `adapters/`: harness-specific entry points
-- `templates/devplan.md`: development plan template
-- `templates/handoff.md`: implementation handoff template
+- `skills/project-kickoff/references/interview.md`: optional interview prompts
+- `skills/project-kickoff/templates/devplan.md`: development plan template
+- `skills/project-kickoff/templates/handoff.md`: implementation handoff template
+- `adapters/opencode/command/project-kickoff.md`: optional custom OpenCode command prompt
 
-Validation is optional. No scripts, dependencies, or network access are required.
+No scripts, dependencies, or network access are required.
