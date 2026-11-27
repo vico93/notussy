@@ -1,47 +1,47 @@
 # Development Plan: <project name>
 
-## Resumo
-<Problema, pessoas usuárias e resultado esperado>
+## Summary
+<Problem, intended users, and desired outcome>
 
-## Objetivos e critérios de sucesso
-- <Resultado observável>
+## Goals and success criteria
+- <Observable outcome>
 
-## Escopo
-### Incluído
+## Scope
+### In scope
 -
-### Fora do escopo
--
-
-## Pessoas usuárias e jornadas principais
+### Out of scope
 -
 
-## Abordagem proposta
-<Arquitetura, componentes, interfaces e justificativa; identifique propostas>
-
-## Restrições
+## Users and key journeys
 -
 
-## Decisões acordadas
-- <Decisão — motivo; alternativas consideradas e por que foram descartadas>
+## Proposed approach
+<Architecture, components, interfaces, and rationale; label proposals>
 
-## Marcos
-- [ ] **<Marco>** — depende de: <marco ou “nenhum”>. Pronto quando: <resultado verificável>. Como verificar: <orientação; não executada nesta etapa>.
-
-## Critérios de aceitação globais
+## Constraints
 -
 
-## Riscos e respostas
+## Decisions
+- <Decision — rationale; alternatives considered and why they were rejected>
+
+## Milestones
+- **<Milestone>** — depends on: <milestone or “none”>. Done when: <verifiable outcome>. How to verify: <guidance; not performed during kickoff>.
+
+## Overall acceptance criteria
 -
 
-## Suposições
+## Risks and responses
 -
 
-## Questões em aberto
+## Assumptions
 -
 
-## Aprovação
-- Status: Rascunho / Aprovado
-- Aprovado por: <nome informado pelo usuário ou User>
-- Data:
+## Open questions
+-
 
-O plano aprovado é a especificação congelada. Acompanhe o andamento dos marcos somente em `handoff.md`.
+## Approval
+- Status: Draft / Approved
+- Approved by: <user-provided name or User>
+- Date:
+
+The approved plan is the frozen specification. Track milestone progress only in `handoff.md`.

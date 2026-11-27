@@ -8,7 +8,7 @@ Copy the `skills/project-kickoff/` directory from this repository into the targe
 
 ### OpenCode
 
-Copy to `.opencode/skills/project-kickoff/` in the target project. OpenCode discovers the skill and makes it available to the agent when relevant. To request it directly, mention `@project-kickoff` in your prompt; the model loads its instructions through OpenCode's skill tool. Skills are not automatically registered as custom slash commands.
+Copy to `.opencode/skills/project-kickoff/` in the target project. OpenCode discovers the skill and makes it available to the agent when relevant. To load it directly, mention `@project-kickoff` in your prompt. On OpenCode v2, the skill frontmatter enables `/project-kickoff` in the TUI through `metadata.opencode/slash: "true"`. Availability may differ by version; verify in your installed version.
 
 You can also install it under `.agents/skills/project-kickoff/`, which OpenCode supports and which is also Pi's standard project-level Agent Skills location.
 
@@ -56,6 +56,7 @@ The included interview guide is loaded only when useful. Templates are stored in
 - `skills/project-kickoff/references/interview.md`: optional interview prompts
 - `skills/project-kickoff/templates/devplan.md`: development plan template
 - `skills/project-kickoff/templates/handoff.md`: implementation handoff template
-- `adapters/opencode/command/project-kickoff.md`: optional custom OpenCode command prompt
 
 No scripts, dependencies, or network access are required.
+
+

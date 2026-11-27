@@ -1,35 +1,35 @@
 # Implementation Handoff: <project name>
 
-## Comece por aqui
-Leia `devplan.md` neste diretório antes de implementar.
+## Start here
+Read `devplan.md` in this directory before implementation.
 
-## Resultado e escopo aprovados
+## Approved outcome and scope
 -
 
-## Primeiro passo de implementação
+## First implementation step
 -
 
-## Arquivos para ler primeiro
-- <Caminho e motivo>
+## Files to read first
+- <Path and reason>
 
-## Decisões e alternativas descartadas
-- <Decisão, motivo e alternativas descartadas>
+## Decisions and rejected alternatives
+- <Decision, rationale, and alternatives rejected>
 
-## Restrições, não objetivos e preferências explícitas
-- <Inclua o que a pessoa usuária deixou claro que não quer>
+## Constraints, non-goals, and explicit preferences
+- <Include what the user clearly said they do not want>
 
-## Como executar e verificar
-- <Comandos conhecidos, se informados ou confirmados; caso contrário “a determinar”>
+## How to run and verify
+- <Known commands if provided or confirmed; otherwise “to be determined”>
 
 ## Milestone progress
 <Copy the approved milestones from devplan.md once as the progress checklist. This handoff is the only place where their status changes; leave devplan.md frozen.>
 - [ ] <Milestone; dependency; done when>
 
-## Questões em aberto
+## Open questions
 -
 
 ## Progress log
 - <Date> — Kickoff approved; implementation not yet started.
 
-## Ao continuar
+## When continuing
 Update milestone checkboxes here and append to the progress log as work advances. Keep `devplan.md` unchanged. Report changes, decisions, checks actually run, and open issues. Ask before expanding scope.
