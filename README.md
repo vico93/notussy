@@ -8,13 +8,13 @@ Copy the `skills/project-kickoff/` directory from this repository into the targe
 
 ### OpenCode
 
-Copy to `.opencode/skills/project-kickoff/` in the target project. OpenCode discovers the skill and makes it available to the agent when relevant. To load it directly, mention `@project-kickoff` in your prompt. On OpenCode v2, the skill frontmatter enables `/project-kickoff` in the TUI through `metadata.opencode/slash: "true"`. Availability may differ by version; verify in your installed version.
+Copy to `.opencode/skills/project-kickoff/` in the target project. OpenCode discovers the skill and makes it available to the agent when relevant. To load it directly, mention `@project-kickoff` in your prompt. On OpenCode v2, the skill frontmatter enables `/project-kickoff` in the TUI through `metadata.opencode/slash: "true"`. Your TUI test confirmed `@project-kickoff` works; slash-command registration may differ by version, so verify in your installed version.
 
 You can also install it under `.agents/skills/project-kickoff/`, which OpenCode supports and which is also Pi's standard project-level Agent Skills location.
 
 ### Pi.dev
 
-Copy to `.agents/skills/project-kickoff/` in the target project. Start Pi from the project or a subdirectory. Pi discovers it and exposes `/skill:project-kickoff` for explicit invocation; it may also load the skill when relevant.
+Copy to `.agents/skills/project-kickoff/` in the target project. Start Pi from the project or a subdirectory. Pi discovers it and exposes `/skill:project-kickoff` for explicit invocation; it may also load the skill when relevant. For structured interview prompts, we recommend the [pi-question-tool extension](https://pi.dev/packages/pi-question-tool), which adds `question` and `questionnaire` TUI tools. Install with `pi install npm:pi-question-tool`. This extension is recommended but has not yet been tested with this skill.
 
 ### Copy commands
 
@@ -46,7 +46,7 @@ Keep the copied skill in version control if the whole team should use it. To upd
 
 ## What it does
 
-The skill interviews you, confirms its understanding, drafts a development plan in chat, and performs a self-review. It asks for explicit approval before writing `devplan.md` and `handoff.md` to the confirmed target directory. If either file already exists, it asks before replacing anything. It writes documents in the user's language. Verification guidance is planned but not executed during kickoff.
+The skill interviews you, confirms its understanding, drafts a development plan in chat, and performs a self-review. On OpenCode, it is instructed to use the built-in `question` tool when available. In Pi, install the recommended extension above for structured questions; otherwise the interview can proceed in normal chat. It asks for explicit approval before writing `devplan.md` and `handoff.md` to the confirmed target directory. If either file already exists, it asks before replacing anything. It writes documents in the user's language. Verification guidance is planned but not executed during kickoff.
 
 The included interview guide is loaded only when useful. Templates are stored inside the skill at `skills/project-kickoff/templates/` and are available after copying the skill folder. Review the skill before use; after approval, it can create the two kickoff documents in your selected project location.
 
@@ -58,5 +58,6 @@ The included interview guide is loaded only when useful. Templates are stored in
 - `skills/project-kickoff/templates/handoff.md`: implementation handoff template
 
 No scripts, dependencies, or network access are required.
+
 
 
