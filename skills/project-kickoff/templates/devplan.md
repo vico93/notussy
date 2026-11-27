@@ -1,4 +1,4 @@
-# Plano de desenvolvimento: <nome do projeto>
+# Development Plan: <project name>
 
 ## Resumo
 <Problema, pessoas usuárias e resultado esperado>
@@ -41,5 +41,7 @@
 
 ## Aprovação
 - Status: Rascunho / Aprovado
-- Aprovado por:
+- Aprovado por: <nome informado pelo usuário ou User>
 - Data:
+
+O plano aprovado é a especificação congelada. Acompanhe o andamento dos marcos somente em `handoff.md`.

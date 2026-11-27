@@ -1,4 +1,4 @@
-# Handoff de implementação: <nome do projeto>
+# Implementation Handoff: <project name>
 
 ## Comece por aqui
 Leia `devplan.md` neste diretório antes de implementar.
@@ -21,14 +21,15 @@ Leia `devplan.md` neste diretório antes de implementar.
 ## Como executar e verificar
 - <Comandos conhecidos, se informados ou confirmados; caso contrário “a determinar”>
 
-## Marcos e estado
-- [ ] <Copie os marcos aprovados de devplan.md; preserve dependências e condição de conclusão>
+## Milestone progress
+<Copy the approved milestones from devplan.md once as the progress checklist. This handoff is the only place where their status changes; leave devplan.md frozen.>
+- [ ] <Milestone; dependency; done when>
 
 ## Questões em aberto
 -
 
-## Registro de progresso
-- <Data> — Kickoff aprovado; implementação ainda não iniciada.
+## Progress log
+- <Date> — Kickoff approved; implementation not yet started.
 
 ## Ao continuar
-Atualize os marcos e o registro de progresso conforme o trabalho avança. Relate mudanças, decisões, verificações realmente executadas e questões restantes. Peça aprovação antes de ampliar o escopo.
+Update milestone checkboxes here and append to the progress log as work advances. Keep `devplan.md` unchanged. Report changes, decisions, checks actually run, and open issues. Ask before expanding scope.

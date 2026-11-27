@@ -15,7 +15,7 @@ This workflow ends with an approved `devplan.md` and a useful `handoff.md` in th
 3. **Confirm understanding:** Before drafting, summarize the agreed outcome, scope, constraints, decisions, assumptions, and remaining questions. Invite corrections. Do not proceed on disputed material facts.
 4. **Draft in chat:** Use `templates/devplan.md` as the structure, adapting headings to the user's language. Do not write a file yet. Stop asking questions when every section can be completed from user-provided facts or clearly labeled proposals/unknowns; no section should require guessing. Include milestones as unchecked tasks with dependencies, a “done when” result, and a way to verify each milestone. Perform the self-review checklist below before presenting the draft.
 5. **Review and approval:** Present the plan and concise summary. Ask for explicit approval. Incorporate revisions; if material decisions change, ask for approval again. Approval is for this plan and target path.
-6. **Write and hand off:** Only after approval, check whether `devplan.md` or `handoff.md` already exists. Never overwrite either silently: ask what to do, or choose a new filename/location with the user's agreement. Save the approved plan with `Status: Approved` and approval date filled in. Create `handoff.md` using `templates/handoff.md`, including progress state and the initial progress log. Do not implement.
+6. **Write and hand off:** Only after approval, check whether `devplan.md` or `handoff.md` already exists. Never overwrite either silently: ask what to do, or choose a new filename/location with the user's agreement. Save the approved plan with `Status: Approved`, approver (the user's name if provided, otherwise `User`), and approval date filled in. Treat the approved plan as the frozen specification; implementation progress belongs only in `handoff.md`. Create `handoff.md` using `templates/handoff.md`, copying milestones as the initial checklist. Do not implement.
 7. **Close:** Confirm paths, approved scope, and remaining questions.
 
 ## Self-review before presenting the plan
@@ -29,4 +29,5 @@ This workflow ends with an approved `devplan.md` and a useful `handoff.md` in th
 - Write plan and handoff in the user's language; translate template headings as useful while preserving filenames.
 - Do not claim any checks were run. Verification guidance is a plan for future work, not executed validation.
 - Keep plan and handoff consistent; mark unknowns explicitly.
+- After handoff, do not change milestone state in `devplan.md`; update the single source of progress in `handoff.md` only.
 - If unable to write to the confirmed target, provide the approved content in chat instead of writing elsewhere.
